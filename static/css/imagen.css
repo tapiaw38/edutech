@@ -1,0 +1,12 @@
+#img{
+    width: 350px;
+    height: auto;
+    margin: auto;
+    display: block;
+    border-radius: 20px;
+    /*box-shadow: 5px 5px 0px #000;*/
+    padding-top: 50px;
+    padding-bottom: 30px;
+}
+
+

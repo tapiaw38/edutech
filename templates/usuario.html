@@ -1,0 +1,15 @@
+{% extends 'base/base.html' %}
+
+
+{%block content%}
+
+<h4>Este es el usuario N° {{ides}}</h4>
+
+
+{% from 'macro.html' import lista_macro %}
+{{ lista_macro(ides) }}
+
+
+
+
+{%endblock%}

@@ -1,0 +1,14 @@
+{% extends 'base/base.html' %}
+
+
+
+
+{% block content %}
+
+{% if lista %}
+    {% for cliente in lista %}
+    <h4>Nombre de cliente: {{cliente}}</h4>
+    {%endfor%}
+{% endif%}
+
+{% endblock %}
