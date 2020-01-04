@@ -4,10 +4,11 @@
 
 {% block content %}
 
-<div class="jumbotron p-4 p-md-5 text-white rounded" style="background-color: #2c71a3">
+<div class="jumbotron p-4 p-md-3 text-white rounded" style="background-color: #2c71a3">
     <div class="col-md-6 px-0">
-      <h1 class="display-4 font-bold">Cursos Técnologia y Programación</h1>
-      <p class="lead my-4">Tomá nuestros cursos presenciales y para crecer profesionalmente.</p>
+      <h1 class="display-4 font-bold">Técnologia y Programación</h1>
+      <p class="lead my-2">Tomá nuestros cursos presenciales y crecer profesionalmente.</p>
+      <p class="lead my-2">Tambien podes elegir la opción online tutorizados con certificación.</p>
     </div>
 </div>
 
@@ -17,9 +18,10 @@
         <div class="col p-4 d-flex flex-column position-static">
           <strong class="d-inline-block mb-2 text-primary">Sistemas operativos</strong>
           <h3 class="mb-0">Introdución a Linux</h3>
-          <div class="mb-1 text-muted">Nivel basico</div>
+           <div class="mb-1 text-muted">Basico / Presencial</div>
+          <div class="mb-1 text-muted">Conocimientos previos: Ninguno</div>
           <p class="card-text mb-auto">En este curso aprenderas los coceptos basicos del software libre linux.</p>
-          <a href="{{ url_for('linux_basico')}}" class="stretched-link">Mas sobre el curso</a>
+          <a href="{{ url_for('linux_basico')}}" class="stretched-link">Opción online</a>
         </div>
         <div class="col-auto d-none d-lg-block">
           <img class="bd-placeholder-img" width="200" height="250" src="{{ url_for('static', filename = 'img/linux.png') }}">
@@ -30,10 +32,11 @@
       <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
         <div class="col p-4 d-flex flex-column position-static">
           <strong class="d-inline-block mb-2 text-success">Programación</strong>
-          <h3 class="mb-0">Curso basico de Python</h3>
-          <div class="mb-1 text-muted">Nivel basico</div>
+          <h3 class="mb-0">Python desde Cero</h3>
+          <div class="mb-1 text-muted">Basico / Presencial</div>
+          <div class="mb-1 text-muted">Conocimientos previos: Ninguno</div>
           <p class="mb-auto">En este curso aprenderas los conceptos del lenguaje de programación.</p>
-          <a href="#" class="stretched-link">Mas sobre el curso</a>
+          <a href="#" class="stretched-link">Opción online</a>
         </div>
         <div class="col-auto d-none d-lg-block">
           <img class="bd-placeholder-img" width="200" height="250" src="{{ url_for('static', filename = 'img/python.png') }}">
@@ -44,10 +47,11 @@
       <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
         <div class="col p-4 d-flex flex-column position-static">
           <strong class="d-inline-block mb-2 text-warning">Diseño</strong>
-          <h3 class="mb-0">Curso basico de Autocad</h3>
-          <div class="mb-1 text-muted">Nivel basico</div>
+          <h3 class="mb-0">Doseño con Autocad</h3>
+          <div class="mb-1 text-muted">Basico / Presencial</div>
+          <div class="mb-1 text-muted">Conocimientos previos: Ninguno</div>
           <p class="mb-auto">Aprende las herramientas basicas para dibujar con presicion tus proyectos de arquitectura.</p>
-          <a href="#" class="stretched-link">Mas sobre el curso</a>
+          <a href="#" class="stretched-link">Opción online</a>
         </div>
         <div class="col-auto d-none d-lg-block">
           <img class="bd-placeholder-img" width="200" height="250" src="{{ url_for('static', filename = 'img/autocad.jpg') }}">

@@ -12,21 +12,22 @@
 
 	<title>{% block title %}Centro de Formacion{% endblock %}</title>
 	<style>
-		.fondo{
-			height: 100vh;
-			background: url('home/tapia/PycharmProjects/flask/venv/proyecto/static/img/fonfo.jpg');
-			background-repeat: no-repeat;
-			background-size: cover;
+		#body{
+
+				background: #d3cce3; /* fallback for old browsers */
+  				background: -webkit-linear-gradient(to right, #d3cce3, #e9e4f0); /* Chrome 10-25, Safari 5.1-6 */
+  				background: linear-gradient(to right, #d3cce3, #e9e4f0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 		}
 
 	</style>
 </head>
 
-<body class="fondo">
+<body>
 	{% block nav%}
 	<!-----------barra de navegacion------------>
-	<nav class="navbar navbar-expand-lg navbar-dark sticky-top scroll-navbar" style="background-color: #b136c7" >
-		<img src="{{ url_for('static', filename = 'img/edutech.png') }}" width="70" height="70" class="d-inline-block align-left">
+	<nav class="navbar navbar-expand-lg navbar-dark sticky-top scroll-navbar" style="background-color: #b136c7; height:80px" >
+		<img src="{{ url_for('static', filename = 'img/edutech.png') }}" width="60" height="60" class="d-inline-block align-left">
 
 	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample08" aria-controls="navbarsExample08" aria-expanded="false" aria-label="Toggle navigation">
 		<span class="navbar-toggler-icon"></span>
@@ -35,14 +36,14 @@
 	  <div class="collapse navbar-collapse justify-content-md-left">
 		<ul class="navbar-nav">
 		  <li class="nav-item active">
-			<a class="nav-link" href="#">Centro de Formación</a>
+			<a class="nav-link" href="#">CT Educación</a>
 		  </li>
 		  <li class="nav-item">
 			<a class="nav-link" href="{{ url_for('inicio') }}">Home</a>
 		  </li>
 			<li class="nav-item dropdown">
     			<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Carreras Universitarias</a>
-    				<div class="dropdown-menu">
+    				<div class="dropdown-menu" style="opacity:0.9;">
       					<a class="dropdown-item" href="#">Action</a>
       					<a class="dropdown-item" href="#">Another action</a>
       					<a class="dropdown-item" href="#">Something else here</a>
@@ -52,7 +53,7 @@
   			</li>
 			<li class="nav-item dropdown">
     			<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Carreras Superiores</a>
-    				<div class="dropdown-menu">
+    				<div class="dropdown-menu" style="opacity:0.9;">
       					<a class="dropdown-item" href="#">Action</a>
       					<a class="dropdown-item" href="#">Another action</a>
       					<a class="dropdown-item" href="#">Something else here</a>
@@ -61,8 +62,8 @@
     				</div>
   			</li>
 			<li class="nav-item dropdown">
-    			<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Cursos Presenciales</a>
-    				<div class="dropdown-menu">
+    			<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Secundario</a>
+    				<div class="dropdown-menu" style="opacity:0.9;">
       					<a class="dropdown-item" href="#">Action</a>
       					<a class="dropdown-item" href="#">Another action</a>
       					<a class="dropdown-item" href="#">Something else here</a>
@@ -71,10 +72,10 @@
     				</div>
   			</li>
 			<li class="nav-item dropdown">
-    			<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Cursos a Distancia</a>
-    				<div class="dropdown-menu">
-      					<a class="dropdown-item" href="#">Action</a>
-      					<a class="dropdown-item" href="#">Another action</a>
+    			<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Cursos</a>
+    				<div class="dropdown-menu" style="opacity:0.9;">
+      					<a class="dropdown-item" href="{{ url_for('curso_infor')}}" >Informatica y Programacion</a>
+      					<a class="dropdown-item" href="#">Dibujo y Diseño Tecnico</a>
       					<a class="dropdown-item" href="#">Something else here</a>
       					<div class="dropdown-divider"></div>
       					<a class="dropdown-item" href="#">Separated link</a>
@@ -83,36 +84,14 @@
 		</ul>
 	  </div>
 
-		<a class="navbar-brand">
-			<img src="{{ url_for('static', filename = 'img/tel.png') }}" width="40" height="40" class="d-inline-block align-end">
-			3837-432344
+		<a class="navbar-brand" href="https://www.facebook.com/municipalidad.tinogasta">
+			<img src="{{ url_for('static', filename = 'img/facebook.png') }}" width="25" height="25" class="d-inline-block">
 		</a>
-
-		<a class="navbar-brand" href="www.facebook.com">
-			<img src="{{ url_for('static', filename = 'img/facebook.png') }}" width="25" height="25" class="d-inline-block align-end">
+		<a class="navbar-brand" style="font-size:15px">
+			<img src="{{ url_for('static', filename = 'img/tel.png') }}" width="35" height="35" class="d-inline-block">Tel. +54-3837-432344
 		</a>
-
 	</nav>
 
-	<!-----------migas de pan------------>
-	<div>
-		<ol class="breadcrumb" style="background-color: #ded7f7">
-			<li class="breadcrumb-item"><a href="#">Secundario a Distancia</a></li>
-			<li class="breadcrumb-item"><a href="#">Postitulos Docentes</a></li>
-			<li class="breadcrumb-item"><a href="{{ url_for('curso_infor')}}">Tecnologia y Programación</a></li>
-			<li class="breadcrumb-item"><a href="#">Dibujo y Diseño</a></li>
-		</ol>
-	</div>
-
-    <div class="inner">
-      <h3 class="masthead-brand"></h3>
-      <nav class="nav nav-masthead justify-content-left">
-        <a class="nav-link" href="#">¿Quienes somos?</a>
-        <a class="nav-link" href="#">¿Donde nos encontraros?</a>
-        <a class="nav-link" href="{{ url_for('contacto') }}">¿Quéres hacernos alguna consulta?</a>
-		  <a class="nav-link" href="#"><span class="badge badge-primary">¿Te gustaria ser instructor?</span></a>
-      </nav>
-    </div>
 	{% with messages = get_flashed_messages() %}
 		{% if messages %}
 			<lu>

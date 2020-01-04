@@ -3,6 +3,18 @@
 
 
 {%block content%}
+
+    <div class="inner">
+      <h3 class="masthead-brand"></h3>
+      <nav class="nav nav-masthead justify-content-left">
+        <a class="nav-link" href="#">¿Quienes somos?</a>
+        <a class="nav-link" href="#">¿Donde nos encontraros?</a>
+        <a class="nav-link" href="{{ url_for('contacto') }}">¿Quéres hacernos alguna consulta?</a>
+		  <a class="nav-link" href="#"><span class="badge badge-primary">¿Te gustaria ser instructor?</span></a>
+      </nav>
+    </div>
+
+
   <!-- Carrusel -->
   <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
@@ -75,6 +87,18 @@
     <div style="height: 200px;"></div>
   </section>
 
+  <section class="py-5">
+    <div class="container">
+      <h1>Postitulos Docentes</h1>
+      <p class="lead">Cursa nuestros postitulos online con puntaje docente.</p>
+      <p class="lead">¡Incribite y cursa desde tu casa!</p>
+      <a class="btn btn-outline-primary">Más info</a>
+    </div>
+  </section>
+
+ <section class="py-5 bg-image-full">
+    <div style="height: 200px;"></div>
+ </section>
 {%endblock%}
 {%block js%}
 $(document).ready(function(){
